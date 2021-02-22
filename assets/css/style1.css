@@ -58,7 +58,7 @@ h3{
 .middle{
     display:flex;
     align-items:flex-end;
-    background:no-repeat url("../Images/center.jpg");
+    background:no-repeat url("../images/center.jpg");
     background-position: center;
 	height: 100%;
 	margin:0px 3%;
