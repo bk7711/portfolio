@@ -1,7 +1,13 @@
-
+:root{
+    --dark:#635c5a;
+    --medium:#705d5c;
+    --light:#cfbfbe;
+    --xlight:#f5e0df;
+    --blues:#1e4b73;
+}
 
 body{
-	background-color:#635c5a;
+	background-color:var(--dark);
 	text-shadow: 1px 1px 1px gray;
     font-family: Georgia, serif;
     width:100%;
@@ -26,7 +32,7 @@ a{
     list-style-type: none;
     padding: 5px;
     font-size:1rem;
-    color: #f5e0df;
+    color: var(--xlight);
 }
 a:link{
     text-decoration: none;
@@ -83,13 +89,13 @@ h3{
     padding-bottom: 15px;
     margin:0px;
     text-shadow: 1px 1px 1px gray;
-    background:#705d5c;
+    background:var(--medium);
 }
 .links{
     border-radius: 7px;
 	max-width: 20rem;
 	height:22rem;
-	background:#705d5c;
+	background:var(--medium);
 	margin:10px;
     opacity:0.45;
 }
@@ -98,10 +104,10 @@ h3{
 	width:21rem;
 	height:22rem;
 	box-shadow: 10px 6px 2px 1px rgba(82, 67, 66, .8);
-	border-bottom:2px solid #1e4b73;
-	border-right:3px solid #1e4b73;
-	color:#f5e0df;
-	text-shadow:1px 1px 1px #1e4b73;
+	border-bottom:2px solid var(--blues);
+	border-right:3px solid var(--blues);
+	color:var(--xlight);
+	text-shadow:1px 1px 1px var(--blues);
 	transition-duration: .3s;
 }
 .linksRight:hover{
@@ -109,24 +115,24 @@ h3{
 	width:21rem;
 	height:22rem;
 	box-shadow: -10px 6px 2px 1px rgba(82, 67, 66, .8);
-	border-bottom:2px solid #1e4b73;
-	border-left:3px solid #1e4b73;
-	color:#f5e0df;
-	text-shadow:1px 1px 1px #1e4b73;
+	border-bottom:2px solid var(--blues);
+	border-left:3px solid var(--blues);
+	color:var(--xlight);
+	text-shadow:1px 1px 1px var(--blues)
 	transition-duration: .3s;
 }
 
 h2{
-    color: #f5e0df;
+    color: var(--xlight);
     text-align: center;
     font-size: 1.5rem;
     font-weight: 2rem;
-    text-shadow:1px 1px 1px #1e4b73;
+    text-shadow:1px 1px 1px var(--blues);
 }
 #aboutMe{
     opacity:1;
-	background-color: #705d5c;
-	color:#f5e0df;
+	background-color: var(--medium);
+	color:var(--xlight);
     width: 100%;
     height: 40%;
     overflow:auto;
@@ -139,9 +145,9 @@ h2{
 
 /* experience section */
 .experience{
-    border-top:3px solid #f5e0df;
+    border-top:3px solid var(--xlight);
     background: #5a5552;
-    color:#cfbfbe;
+    color:var(--light);
     line-height: 2rem;
     font-size: 1rem;
     display: flex;
@@ -163,14 +169,14 @@ ul{
 }
 .btn a{
     font-size: .8em;
-    color:#cfbfbe; 
+    color:var(--light); 
     
     border-radius: 5px;
 }
 
 .btn{
     margin:10px;
-    background-color: #705d5c;
+    background-color: var(--medium);
     border: 2px solid #5a4e4d;
 }
 .btn:hover{
@@ -180,7 +186,7 @@ ul{
     text-emphasis: bold;
     list-style-type: none;
     padding: 3px 0px;
-    color: #f8f0ef;
+    color: var(--xlight);
 }
 /* portfolio section */
 #portfolio{
@@ -188,8 +194,8 @@ ul{
     flex-wrap:wrap;
     flex-direction: row;
     justify-content: space-between;
-    border-top:3px solid #f5e0df;
-    color:#cfbfbe;
+    border-top:3px solid var(--xlight);
+    color:var(--light);
     line-height: 2rem;
     font-size: 1.3rem;
     /* padding-left: 1rem; */
@@ -199,7 +205,7 @@ ul{
 }
 .portfolio{
     width: 500px;
-    background-color:#705d5c;
+    background-color:var(--medium);
     /* display:block; */
     margin:20px;
 }
@@ -213,11 +219,14 @@ ul{
 }
 
 .btn-primary{
-    background-color: #1e4b73;
-    color:#f5e0df;
+    background-color: var(--blues);
+    color:var(--xlight);
 }
 #portfolio h2{
     padding:5px;
+}
+.github:hover{
+    color:var(--dark);
 }
 
 /* contact me */
@@ -226,8 +235,8 @@ ul{
     flex-direction: column;
     align-items: flex-start;
     width:98%;
-    border-top:3px solid #f5e0df;
-    color:#cfbfbe;
+    border-top:3px solid var(--xlight);
+    color:var(--light);
     line-height: 2rem;
     font-size: 1.3rem;
     padding: 15px;
@@ -235,7 +244,7 @@ ul{
 }
 table{
     margin:20px;
-    color:#cfbfbe;
+    color:var(--light);
     max-width:50%;
 }
 td{
