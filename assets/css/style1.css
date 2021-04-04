@@ -145,14 +145,21 @@ h2{
     line-height: 2rem;
     font-size: 1rem;
     display: flex;
-    padding: 1.5rem;
+    padding: 1rem;
     margin:15px;
     text-shadow: none;
+    flex-wrap: wrap;
+    width:98%;
 }
 #leftTitle{
     text-align: left;
     justify-content: start;
     padding:0px;
+}
+ul{
+    min-width: 150px;
+    margin:0px 10px 0px 20px;
+    padding:8px;
 }
 .btn a{
     font-size: .8em;
@@ -185,9 +192,10 @@ h2{
     color:#cfbfbe;
     line-height: 2rem;
     font-size: 1.3rem;
-    padding-left: 2rem;
+    /* padding-left: 1rem; */
     margin:15px;
-    width:100%;
+    width:98%;
+    align-content: flex-start;
 }
 .portfolio{
     width: 500px;
@@ -234,6 +242,13 @@ td{
     max-width: 200px;
     font-size: 1rem;
 }
+i{
+    padding: 0px 30px;
+    font-size: 1.5em;
+}
+.icons{
+    height:30px;
+}
 
 @media screen and (max-width: 995px){
     .navbar-nav{
@@ -244,7 +259,13 @@ td{
     }
     .navbar-nav li{
         padding: 4px;
-        
+        justify-content: center;
+    }
+    h1{
+        font-size: 2em;
+    }
+    h3{
+        font-size: 1em;
     }
     #middle{
         background:none;
@@ -259,27 +280,24 @@ td{
     
     .experience{
     display:block;
+    margin:0px;
     }
-
+    ul{
+        margin:0px;
+    }
+    
+}
+@media screen and (max-width: 786px){
     .portfolio{
-    display:block;
-    top:90rem;
-    width:95%;
+    width:100%;
+    padding:10px 0px;
+    margin:10px 10px;
     }
-    .video{
-    left:3rem;
-	height: 250px;
-    width: 350px;
-    margin:10px;
-    display:block;
-
+    #portfolio{
+        padding:0px;
+        margin: 0px 10px;
     }
-    #first{
-        height:350px;
-        width:450px;
-    }
-    .contact{
-        top:180rem;
-        width:95%
+    #space{
+        display:none;
     }
 }
