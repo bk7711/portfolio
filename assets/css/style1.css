@@ -3,7 +3,7 @@
     --medium:#6d6362;
     --light:#cfbfbe;
     --xlight:#f5e0df;
-    --blues:#1e4b73;
+    --blues:#387db9;
     --muteblue:#1e4b735b;
 }
 *{
@@ -218,7 +218,6 @@ main{
 }
 
 .btn{
-    margin:30px 10px;
     width:100px;
     height: 40px;
     background-color: var(--medium);
@@ -283,11 +282,42 @@ main{
     border:3px solid var(--dark);
     margin: 15px;
     border-radius: 10px;
+    position:relative;
+    
 }
-.sites img{
-    object-fit: contain;
-    width: 500px;
-    height:350px;
+.card-body{
+    text-align: left;
+    padding-left:10px;
+}
+.image{
+    object-fit: cover;
+    width: 90%;
+    height:70%;
+    margin: 10px;
+    position: relative;
+    left: 15px;
+    opacity:1;
+}
+.sites:hover img{
+    opacity:0.4;
+    transition:.5s ease;
+    backface-visibility:hidden;
+}
+.sites .btn{
+    transition: .5s ease;
+    opacity:0;
+    position:absolute;
+    top:30%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    z-index:5;
+    
+}
+.sites:hover .btn{
+    opacity:1;
+    background-color:#387db9;
+    border: 2px solid var(--blues);
 }
 /* 
 }
