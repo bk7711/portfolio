@@ -159,7 +159,7 @@ main{
 }
 
 /* experience section */
-.experience{
+.components{
     border-top:2px solid var(--medium);
     background-color: var(--muteblue) ;
     color:var(--light);
@@ -172,11 +172,13 @@ main{
     flex-wrap: wrap;
     width:98%;
 }
-.experience h2{
+.components h2{
     text-align: left;
     justify-content: start;
     padding:0px;
+    font-size: 25px;
     flex: 1;
+    color: var(--light)
 }
 .experience ul{
     flex: 3 25%;
@@ -186,6 +188,16 @@ main{
 }
 .experience ul li{
     padding-left:20px;
+}
+.job{
+    text-emphasis: bold;
+    list-style-type: none;
+    padding: 0;
+    color: var(--xlight);
+    font-size: 20px;
+    text-align: center;
+    text-decoration: underline;
+    
 }
 #center-job{
     border-right: 2px solid var(--dark);
@@ -207,17 +219,11 @@ main{
     height: 40px;
     background-color: var(--medium);
     border-radius: 7px;
-    /* border: 2px solid #5a4e4d; */
 }
 .btn:hover{
     background-color: #a08381;
 }
-.title{
-    text-emphasis: bold;
-    list-style-type: none;
-    padding: 0;
-    color: var(--xlight);
-}
+
 
 /* multiple navbars */
 .repeat-nav{
@@ -234,44 +240,38 @@ main{
     text-shadow:2px 1px 1px var(--blues);
 }
 
-/* 
-#leftTitle{
-    
-}
-ul{
-    min-width: 150px;
-    margin:0px 10px 0px 20px;
-    padding:8px;
-}
- */
 /* portfolio section */
-/* #portfolio{
-    display: flex;
-    flex-wrap:wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    border-top:3px solid var(--xlight);
+#portfolio{
     color:var(--light);
     line-height: 2rem;
     font-size: 1.3rem;
-    
-    margin:15px;
-    width:98%;
-    align-content: flex-start;
+    margin:0;
+}
+#portfolio div{
+    flex: 3 70%;
 }
 .portfolio{
-    width: 500px;
+    display:flex;
+    flex-wrap: wrap;
+}
+.sites{
+    flex:1 40%;
     background-color:var(--medium);
- 
     margin:20px;
 }
+.sites img{
+    width:100%;
+    margin-top:10px;
+    object-fit: fill;
+}
+/* 
+}
+
 .portfolio h5{
     font-size: 1.5em;
     padding-bottom: 20px;
 }
-.portfolio img{
-    margin-top:10px;
-    object-fit: fill;
+
 }
 
 .btn-primary{
