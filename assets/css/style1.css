@@ -29,9 +29,9 @@ nav{
     width:100%;
     display: flex;
     justify-content: flex-end;
-    position: -webkit-sticky;
+    /* position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 0; */
     /* background-attachment: fixed;
     background-position: 100%; */
 }
@@ -68,6 +68,7 @@ header div h2{
 .gradient{
     background-image:linear-gradient(rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
     width: 100%;
+    
 }
 .navbar-nav{
     display: flex;
@@ -80,7 +81,8 @@ header div h2{
 main{
     display:flex;
     padding:10px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+    background-image:linear-gradient(rgba(255, 255, 255, 0),rgba(30, 75, 115, .4));
 }
 .card{
     margin: 30px;
@@ -136,6 +138,8 @@ main{
     width: 70%;
     height: 30%;
     text-align: center;
+    overflow:auto;
+    -ms-overflow-style: none;
 }
 .middle article h2{
     color: var(--xlight);
@@ -148,13 +152,12 @@ main{
 }
 .middle article p{
 	color:var(--xlight);
-    overflow:auto;
-    padding:10px 15px;
+    padding:10px 20px;
     line-height: 1.5rem;
     margin: auto;
-    -ms-overflow-style: none;
+    
 }
-.middle article p::-webkit-scrollbar{
+.middle article::-webkit-scrollbar{
     display: none;
 }
 
@@ -167,7 +170,7 @@ main{
     font-size: 1rem;
     display: flex;
     padding:20px 10px 50px 25px;
-    margin:35px 0 15px 0;
+    margin: 0;
     text-shadow: none;
     flex-wrap: wrap;
     width:98%;
@@ -176,6 +179,7 @@ main{
     text-align: left;
     justify-content: start;
     padding:0px;
+    margin-right:20px;
     font-size: 25px;
     flex: 1;
     color: var(--light)
@@ -219,6 +223,7 @@ main{
     height: 40px;
     background-color: var(--medium);
     border-radius: 7px;
+    align-self: center;
 }
 .btn:hover{
     background-color: #a08381;
@@ -230,7 +235,9 @@ main{
     display: flex;
     flex: 0 100%;
     justify-content: flex-end;
-    margin:0 10px 40px 0;
+    padding: 0 20px;
+    margin:0;
+    background-color: rgba(16, 43, 66, .4);
 }
 .nav-item{
     padding:10px;
@@ -239,30 +246,48 @@ main{
 .nav-link:hover{
     text-shadow:2px 1px 1px var(--blues);
 }
+/* end of multiple navbars */
 
 /* portfolio section */
+
 #portfolio{
+    border-top:2px solid var(--medium);
+    background-color: var(--muteblue) ;
     color:var(--light);
     line-height: 2rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
+    display: flex;
+    padding:20px 10px 50px 25px;
     margin:0;
+    text-shadow: none;
+    flex-wrap: wrap;
+    width:100%;
+}
+#portfolio h2{
+    flex: 0 9%;
+    text-align: left;
+    justify-content: start;
+    padding:0px;
+    font-size: 25px;
+    flex: 1;
+    color: var(--light)
 }
 #portfolio div{
-    flex: 3 70%;
-}
-.portfolio{
-    display:flex;
-    flex-wrap: wrap;
+    flex: 3 60%;
+    display:inline-block;
 }
 .sites{
-    flex:1 40%;
-    background-color:var(--medium);
-    margin:20px;
+    width:500px;
+    height: 450px;
+    background-color: var(--medium);
+    border:3px solid var(--dark);
+    margin: 15px;
+    border-radius: 10px;
 }
 .sites img{
-    width:100%;
-    margin-top:10px;
-    object-fit: fill;
+    object-fit: contain;
+    width: 500px;
+    height:350px;
 }
 /* 
 }
