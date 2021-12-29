@@ -352,6 +352,8 @@ table{
 /* contact me */
 .contact{
     justify-content: space-between;
+    padding-right:20px;
+    width: 97.5%;
 }
 .contact h2{
     flex: 0 10%;
