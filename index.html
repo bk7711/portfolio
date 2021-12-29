@@ -12,7 +12,7 @@
 
 <body>
 
-    <header class="gradient">
+    <header class="gradient" id="#home">
         <nav class="navbar">
             <ul class="navbar-nav">
                 <li class="active">
@@ -29,7 +29,7 @@
                 </li>
             </ul>
         </nav> 
-        <div class="intro" id="#home">
+        <div class="intro" >
             <img src="assets/images/headshot.jpg" id="headshot">
             <h1>Carolyn Blackwell</h1>
             <h2>Professional, Manager, Developer</h2>
@@ -37,9 +37,9 @@
     </header>
     
 
-    <!-- Top with nav bar and name -->
+    <!-- end of Top with nav bar and name -->
 
-    <!-- cards and Introduction -->
+    <!-- Main Introduction -->
     <main>
         <section class="left" id="left">
             <article class="card linksLeft links" href="#experience">
@@ -95,7 +95,9 @@
             </article>
         </section>
     </main>
+<!-- End of main introduction -->
 
+<!-- Start of experience section -->
     <section class="components experience" id="experience">
         <h2 id="left-title">Experience
             <br>
@@ -131,6 +133,9 @@
                 exceeding $100 million sales team goal for two consecutive years</li>
         </ul>
     </section>
+    <!-- End of Experience section -->
+
+    <!-- repeat nav -->
     <nav>
         <ul class="repeat-nav">
             <li class="nav-item active">
@@ -147,6 +152,9 @@
             </li>
         </ul>
     </nav>
+    <!-- end of repeat nav -->
+
+    <!-- Start of Portfolio section -->
     <section id="portfolio">
         
             <h2>Portfolio</h2>
@@ -194,6 +202,9 @@
                 </div>
         </div>
     </section>
+    <!-- end of Portfolio section -->
+
+    <!-- repeat nav -->
     <nav>
         <ul class="repeat-nav">
             <li class="nav-item active">
@@ -210,6 +221,57 @@
             </li>
         </ul>
     </nav>
+    <!-- end of repeat nav -->
+
+<!-- start of Education section -->
+    <section id="education" class = "education components">
+        <h2>Education</h2>
+        <div>
+            <h3 class="school">Rutgers University, New Jersey</h3>
+            <table>
+                <tr class="t-row">
+                    <td class="grad-year">
+                        <h4>2022</h4>    
+                    </td>
+                    <td class="grad-title">
+                        <h4>Certification</h4>
+                        <p>Full Stack Web Development</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h3 class="school">National University, California</h3>
+            <table>
+                <tr class="t-row">
+                    <td class="grad-year">
+                        <h4>2013</h4>    
+                    </td>
+                    <td class="grad-title">
+                        <h4>Master of Education</h4>
+                        <p>Mathematics Education</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h3 class="school">California State University, Long Beach</h3>
+            <table>
+                <tr class="t-row">
+                    <td class="grad-year">
+                        <h4>2004</h4>    
+                    </td>
+                    <td class="grad-title">
+                        <h4>Bachelor's of Arts</h4>
+                        <p>Liberal Studies, Mathematics</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+<!-- end of Education section -->
+
+    <!-- start of footer -->
     <footer>
         <div class="contact components" id="contact">
             <h2 class="title">Contact Information</h2>
@@ -229,7 +291,19 @@
                                 aria-hidden="true"></i></a></td>
                 </tr>
             </table>
+            <div class="reach-out">
+                <form>
+                    <h3>Reach Out!</h3>
+                    <label for="contact-name">Your name</label>
+                    <input class="input" type="text" id="contact-name" placeholder="Your Name"/>
+                    <br>
+                    <label for="contact-message">Message</label>
+                    <textarea class="input" name="" id="contact-message" placeholder="Message"></textarea>
 
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            
         </div>
 
 
