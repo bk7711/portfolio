@@ -256,11 +256,11 @@ main{
     line-height: 2rem;
     font-size: 1rem;
     display: flex;
-    padding:20px 10px 50px 25px;
+    padding:20px 0px 50px 25px;
     margin:0;
     text-shadow: none;
     flex-wrap: wrap;
-    width:100%;
+    width:98.5%;
 }
 #portfolio h2{
     flex: 0 9%;
@@ -370,7 +370,20 @@ form label{
 }
 .input{
     line-height: 10px;
-}
+    border: 1px solid var(--muteblue);
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: var(--blues);
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.75);
+    }
+.input:focus{
+        background-color: rgba(255,255,255,1);
+        outline: none;
+    }
 /* .contact{
     display: flex;
     flex-direction: column;
