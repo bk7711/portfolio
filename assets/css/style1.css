@@ -29,17 +29,12 @@ nav{
     width:100%;
     display: flex;
     justify-content: flex-end;
-    /* position: -webkit-sticky;
-    position: sticky;
-    top: 0; */
-    /* background-attachment: fixed;
-    background-position: 100%; */
 }
 
 nav ul li{    
     list-style-type: none;
     padding: 10px 20px;
-    font-size: 1.5rem;
+    font-size: 20px;
     
 }
 nav ul li a:link{
@@ -54,15 +49,15 @@ nav ul li a:visited{
 }
 header div h2{
     margin:5px 0px;
-    font-size: 25px;
+    font-size: 20px;
 }
 .intro{
     align-self: center;
     text-align: center;
 }
 #headshot{
-    width: 140px;
-    height: 150px;
+    width: 34%;
+    height: 35%;
     margin:30px 0 15px 0;
 }
 .gradient{
@@ -83,6 +78,11 @@ main{
     padding:10px 10px 50px 10px;
     /* margin-bottom: 30px; */
     background-image:linear-gradient(rgba(255, 255, 255, 0),rgba(30, 75, 115, .4));
+    flex-wrap: wrap;
+}
+.left, .right{
+    flex: 1 350px;
+    min-width: 250px;
 }
 .card{
     margin: 30px;
@@ -94,7 +94,7 @@ main{
     border-top-right-radius: 7px;
 	object-fit:cover; 
 	height: 300px;
-	width: 250px;
+	width: 100%;
 }
 .title{
     font-size: 30px;
@@ -122,11 +122,17 @@ main{
 }
 .middle{
     background:no-repeat url("../images/center.jpg");
+    background-size: 100%;
     background-position: center;
 	padding: 0px;
+    flex: 10 2;
+    height:650px;
+    border-radius: 20px;
+    align-self: center;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    min-width: 600px;
 }
 .middle article{
     display: flex;
@@ -135,11 +141,13 @@ main{
     box-shadow: 6px 6px 2px 3px rgba(66, 70, 82, 0.5);
     border-radius: 4px;
     z-index: 2;
-    width: 70%;
+    /* margin:0 15%; */
     height: 30%;
+    width:90%;
     text-align: center;
     overflow:auto;
     -ms-overflow-style: none;
+    min-width: 600px;
 }
 .middle article h2{
     color: var(--xlight);
@@ -154,12 +162,12 @@ main{
 	color:var(--xlight);
     padding:10px 20px;
     line-height: 1.5rem;
-    margin: auto;
     
 }
 .middle article::-webkit-scrollbar{
     display: none;
 }
+
 
 /* experience section */
 .components{
@@ -172,7 +180,6 @@ main{
     padding:20px 10px 50px 25px;
     margin: 0;
     text-shadow: none;
-    flex-wrap: wrap;
     width:98%;
 }
 .components h2{
@@ -182,16 +189,25 @@ main{
     margin-right:20px;
     font-size: 25px;
     flex: 1;
-    color: var(--light)
+    color: var(--light);
+    align-items: stretch;
+}
+.experience{
+    height:100%;
+    flex-direction: row;
 }
 .experience ul{
-    flex: 3 25%;
+    flex: 1 3 25%;
     min-width: 150px;
     margin:0px 10px 0px 20px;
     padding:8px;
 }
 .experience ul li{
     padding-left:20px;
+}
+.career{
+    display:flex;
+    flex-wrap: wrap;
 }
 .job{
     text-emphasis: bold;
@@ -319,6 +335,10 @@ main{
     background-color:#387db9;
     border: 2px solid var(--blues);
 }
+.sites:first-of-type{
+    width:650px;
+    height:600px;
+}
 /* education section */
 .education h2{
     flex: 0 10%;
@@ -327,15 +347,15 @@ main{
     padding: 30px;
     width: 470px;
     text-align: center;
+    display:flex;
+    flex-direction: column;
 }
 .education div:nth-child(3){
     border-right: 2px solid var(--dark);
     border-left: 2px solid var(--dark);
 }
-table{
-    margin: 20px;
-    position: relative;
-    left: 10px;
+.education div table{
+    align-items: center;
 }
 .school{
     font-size: 25px;
@@ -349,7 +369,12 @@ table{
 .grad-title h4{
     font-size: 18px;
 }
-/* contact me */
+.t-row{
+    text-align: center;
+    margin:0px;
+}
+/* end of education section */
+/*start of contact me */
 .contact{
     justify-content: space-between;
     padding-right:20px;
@@ -358,9 +383,8 @@ table{
 .contact h2{
     flex: 0 10%;
 }
-
-.reach-out{
-    padding-right: 20px;
+/* .reach-out{
+    padding-right: 30px;
     
 }
 .reach-out h3{
@@ -385,25 +409,14 @@ form label{
 .input:focus{
         background-color: rgba(255,255,255,1);
         outline: none;
-    }
-/* .contact{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width:98%;
-    border-top:3px solid var(--xlight);
-    color:var(--light);
-    line-height: 2rem;
-    font-size: 1.3rem;
-    padding: 15px;
-    text-shadow: none;
-}
-table{
+    } */
+
+.contact-table{
     margin:20px;
     color:var(--light);
     max-width:50%;
 }
-td{
+.contact-table td{
     max-width: 200px;
     font-size: 1rem;
 }
@@ -413,4 +426,223 @@ i{
 }
 .icons{
     height:30px;
+} 
+
+/* MEDIA QUERIES */
+@media screen and (max-width:1200px){
+*{
+    z-index: 1;
+}
+
+section{
+    width:100%;
+}
+header{
+    height:320px;
+    width:100%;
+    margin:0;
+}
+nav ul li{    
+    list-style-type: none;
+    padding: 7px 10px;
+    font-size: 15px;
+    
+}
+main{
+    width:100%;
+    padding:5px;
+    margin:0;
+    height: 100vh;
+    padding-bottom:20px;
+}
+article{
+    margin:0px;
+    padding:0px;
+}
+
+.middle{
+    display: inline-block;
+    order:3;
+    width:80%;
+    min-width:600px;
+    background-image: none;
+}
+.middle article{
+    width: 90%;
+    margin:auto;
+    height:30%;
+}
+.middle article p{
+    line-height: 30px;
+}
+.middle{
+    width:100%;
+    margin:0
+}
+/* experience section */
+.experience{
+    width:100%;
+}
+.career{
+    display: block;
+}
+.career ul{
+    margin: 20px;
+}
+#center-job{
+    border:none;
+}
+
+/* portfolio section */
+#portfolio div{
+    display:block;
+}
+#portfolio h2{
+    padding-right:20px;
+}
+.sites{
+    /* max-width:450px; */
+    /* flex:0 1 450px; */
+    justify-self:center;
+    height:200px;
+    padding:10px;
+    margin:auto 0;
+}
+.sites{
+}
+.card-body{
+    display:flex;
+    flex-direction: row;
+}
+.card-body .title{
+   font-size: 20px;;
+}
+.education{
+    padding:0;
+}
+.contact{
+    width:100%;
+    padding:0;
+    margin:0;
+}
+}
+@media screen and (max-width: 980px) {
+    /* header{
+        width: 100%;
+        height:300px;
+        display:flex;
+        flex-direction: column;
+    }
+    
+    nav ul li{    
+        list-style-type: none;
+        padding: 5px 10px;
+        font-size: 20px;
+        
+    }
+    header div h2{
+        margin:5px 0px;
+        font-size: 15px;
+    }
+    #headshot{
+        width: 100px;
+        height: 110px;
+        margin:30px 0 15px 0;
+    }
+    
+    main{
+        display:flex;
+        padding:10px 10px 20px 10px;
+        background-image:linear-gradient(rgba(255, 255, 255, 0),rgba(30, 75, 115, .4));
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card-img{
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        object-fit:cover; 
+        height: 400px;
+        width: 100%;
+    }
+    
+    .middle{
+        display: inline-block;
+        order:3;
+        width:80%;
+        min-width:600px;
+        background-image: none;
+    }
+    .middle article{
+        width: 90%;
+        height:100%;
+    }
+    .components{
+        border-top:2px solid var(--medium);
+        background-color: var(--muteblue) ;
+        color:var(--light);
+        line-height: 2rem;
+        font-size: 1rem;
+        display: flex;
+        padding:20px 10px 50px 25px;
+        margin: 0;
+        text-shadow: none;
+        flex-wrap: wrap;
+        width:98%;
+    }
+    .components h2{
+        text-align: left;
+        justify-content: start;
+        padding:0px;
+        margin-right:20px;
+        font-size: 25px;
+        flex: 1;
+        color: var(--light)
+    }
+    .experience{
+        height:100%;
+    }
+    .experience ul{
+        
+        min-width: 150px;
+        margin:0px 10px 0px 20px;
+        padding:8px;
+    }
+    .experience ul li{
+        padding-left:20px;
+    }
+    .job{
+        text-emphasis: bold;
+        list-style-type: none;
+        padding: 0;
+        color: var(--xlight);
+        font-size: 20px;
+        text-align: center;
+        text-decoration: underline;
+        
+    }
+    #center-job{
+        border-right: 2px solid var(--dark);
+        border-left: 2px solid var(--dark);
+        padding-left: 35px;
+    }
+    .btn a{
+        font-size: 15px;
+        color:var(--light); 
+        style:none;
+    }
+    .btn a:link{
+        text-decoration: none;
+    }
+
+    .btn{
+        width:100px;
+        height: 40px;
+        background-color: var(--medium);
+        border-radius: 7px;
+        align-self: center;
+    }
+    .btn:hover{
+        background-color: #a08381;
+    }
 } */
