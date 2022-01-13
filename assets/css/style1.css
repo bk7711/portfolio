@@ -78,11 +78,11 @@ main{
     padding:10px 10px 50px 10px;
     /* margin-bottom: 30px; */
     background-image:linear-gradient(rgba(255, 255, 255, 0),rgba(30, 75, 115, .4));
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 .left, .right{
-    flex: 1 350px;
-    min-width: 250px;
+    flex: 1 1 350px;
+    min-width: 200px;
 }
 .card{
     margin: 30px;
@@ -275,7 +275,6 @@ main{
     padding:20px 0px 50px 25px;
     margin:0;
     text-shadow: none;
-    flex-wrap: wrap;
     width:98.5%;
 }
 #portfolio h2{
@@ -287,13 +286,17 @@ main{
     flex: 1;
     color: var(--light)
 }
-#portfolio div{
-    flex: 3 60%;
-    display:inline-block;
+.portfolio{
+    flex:1 5 70%;
+    margin: 20px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
 }
 .sites{
-    width:500px;
-    height: 450px;
+    flex-basis: 40%;
+    /* width:450px; */
+    height: 400px;
     background-color: var(--medium);
     border:3px solid var(--dark);
     margin: 15px;
@@ -309,10 +312,15 @@ main{
     object-fit: cover;
     width: 90%;
     height:70%;
-    margin: 10px;
+    
     position: relative;
-    left: 15px;
+    /* left: 15px; */
     opacity:1;
+}
+#port-one{
+    flex-basis:100%;
+    height:500px;
+    
 }
 .sites:hover img{
     opacity:0.4;
@@ -335,39 +343,47 @@ main{
     background-color:#387db9;
     border: 2px solid var(--blues);
 }
-.sites:first-of-type{
-    width:650px;
-    height:600px;
-}
+
 /* education section */
 .education h2{
     flex: 0 10%;
 }
-.education div{
+.alledu{
+    display:flex;
+    flex:1 1 90%;
+}
+.alledu div{
     padding: 30px;
     width: 470px;
     text-align: center;
     display:flex;
     flex-direction: column;
 }
-.education div:nth-child(3){
+.alledu div:nth-child(2){
     border-right: 2px solid var(--dark);
     border-left: 2px solid var(--dark);
 }
-.education div table{
+.alledu div table{
     align-items: center;
 }
 .school{
-    font-size: 25px;
+    font-size: 1.5vw;
+}
+table{
+    margin: 25px 15px;
 }
 .grad-year{
     padding:5px 20px;
+    font-size:1vw;
 }
 .grad-title{
     padding: 5px 20px;
 }
 .grad-title h4{
-    font-size: 18px;
+    font-size: 1.2vw;
+}
+.grad-title p{
+    font-size: .9vw;
 }
 .t-row{
     text-align: center;
@@ -430,9 +446,9 @@ i{
 
 /* MEDIA QUERIES */
 @media screen and (max-width:1200px){
-*{
+/* *{
     z-index: 1;
-}
+} */
 
 section{
     width:100%;
@@ -452,8 +468,9 @@ main{
     width:100%;
     padding:5px;
     margin:0;
-    height: 100vh;
+    height: 100%;
     padding-bottom:20px;
+    flex-wrap:wrap;
 }
 article{
     margin:0px;
@@ -463,9 +480,10 @@ article{
 .middle{
     display: inline-block;
     order:3;
-    width:80%;
+    width:100%;
     min-width:600px;
     background-image: none;
+    height: 100%;
 }
 .middle article{
     width: 90%;
@@ -475,19 +493,26 @@ article{
 .middle article p{
     line-height: 30px;
 }
-.middle{
+/* .middle{
     width:100%;
-    margin:0
-}
+    margin:0;
+    
+} */
 /* experience section */
-.experience{
-    width:100%;
+.components{
+    width:100vw;
+    padding: 20px 0 50px 10px;
 }
 .career{
     display: block;
+    width: 100vw;
 }
 .career ul{
-    margin: 20px;
+    margin: 10px;
+    padding: 0;
+}
+.career ul li{
+    overflow-wrap:wrap;
 }
 #center-job{
     border:none;
@@ -508,18 +533,26 @@ article{
     padding:10px;
     margin:auto 0;
 }
-.sites{
-}
+
 .card-body{
-    display:flex;
-    flex-direction: row;
+    display:inline-block;
+    text-align: center;
+    
 }
 .card-body .title{
-   font-size: 20px;;
+   font-size: 20px;
+   padding:0;
 }
-.education{
-    padding:0;
+.image{
+    margin:0;
 }
+
+/* education section */
+
+}
+/* end of education section */
+
+/* contact section */
 .contact{
     width:100%;
     padding:0;
