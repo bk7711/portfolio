@@ -366,6 +366,7 @@ main{
 }
 .alledu{
     display:flex;
+    flex-wrap:wrap;
     flex:1 5 600px;
 }
 .alledu div{
