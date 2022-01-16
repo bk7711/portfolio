@@ -212,6 +212,9 @@ main{
     display:flex;
     flex-wrap: wrap;
 }
+.career ul{
+    list-style-type: disc;
+}
 .job{
     text-emphasis: bold;
     list-style-type: none;
@@ -603,9 +606,10 @@ article{
     .components{
         flex-direction: column;  
         width:100%;
-        padding:0;
+        padding:15px 0 15px 0;
     }
     .components h2{
+
         text-align: center;
         text-decoration: underline;
     }
@@ -632,4 +636,54 @@ article{
     .grad-title p{
         font-size: 10px;
     }
+}
+@media screen and (max-width: 575px){
+    .navbar-nav{
+        position:fixed;
+        width: 100vw;
+        background-color: rgba(30, 75, 115, 0.7);
+        z-index: 3;
+        margin:0;
+        padding-top:0;
+
+    }
+    .navbar-nav li{
+        padding: 5px;
+        
+        
+        
+    }
+    .intro{
+        position:relative;
+        top: 20px;
+    }
+    #headshot{
+        
+        width:33%;
+    }
+    .middle article{
+        display:none;
+    }
+    .experience{
+        flex-basis: 100vw;
+    }
+    #left-title .btn{
+        width:70px;
+        height:40px;
+        margin:5px;
+    }
+
+    .career{
+        width: 95%;
+    }
+    .career ul{
+        width:90%;
+        padding:0 5px 0 35px;
+        overflow: hidden;
+        margin:0;
+    }
+    .repeat-nav{
+        display:none
+    }
+    
 }
