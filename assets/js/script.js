@@ -1,5 +1,6 @@
-var modalBoxEl = document.querySelector(".modal-trigger");
-
+var modalBoxEl = document.getElementsByClassName("modal-trigger");
+let targetCategory = "";
+let projects = [];
 let portfolio = [
   {
     title: "Digital Notebook",
@@ -96,7 +97,25 @@ let portfolio = [
 ];
 
 let getProjects = () => {
-  let projects = portfolio.filter();
+  function filterByCategory() {
+    for (var j = 0; j < portfolio.length; j++) {
+      if (portfolio[i].category == targetCategory) {
+        return true;
+      } else return false;
+    }
+    projects = portfolio.filter(filterByCategory());
+    console.log(projects);
+  }
 };
 
-modelBoxEl.addEventListener("click", getProjects());
+let setCategory = () => {
+  for (var i = 0; i < modalBoxEl.length; i++) {
+    modalBoxEl[i].addEventListener("click", function (e) {
+      console.log(e.target);
+      targetCategory = e.target.textContent;
+      console.log(targetCategory);
+    });
+  }
+};
+
+setCategory();
