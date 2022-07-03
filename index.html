@@ -6,8 +6,11 @@
     <meta charset="utf-8">
     <title>C. Blackwell</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="./assets/css/reset.css"> -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <!-- <link rel="stylesheet" href="./assets/css/reset.css"> -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style1.css">
+    <script src = "assets/js/script.js"></script>
 </head>
 
 <body>
@@ -159,15 +162,42 @@
 
     <!-- Start of Portfolio section -->
     <section id="portfolio" class = "components">
-        
-            <h2>Portfolio</h2>
+            <div class = "categories">
+                <h2>Portfolio</h2>
+                <ul>
+                    <li><a class="modal-trigger" href="#modal1">HTML/CSS/JS</a> </li>
+                    <li><a class="modal-trigger" href="#modal2">Node.js</a></li>
+                    <li><a class="modal-trigger" href="#modal3">MySQL</a></li>
+                    <li><a class="modal-trigger" href="#modal4">MongoDB</a></li>
+                    <li><a class="modal-trigger" href="#modal5">React/MERN</a></li>
+                </ul>
+            </div>
+            <!--Start of Modals-->
+            <div id="modal1" class="modal">
+                <div class="sites" id="port-two">
+                    <button class="btn">
+                            <a href="https://bk7711.github.io/runbuddy/" >View website</a>
+                    </button>
+                    <img class="image" src="assets/images/runbuddy.png" alt="Run Buddy">
+                    <div class="card-body">
+                        <h3 class="title">Run Buddy</h3>
+                        <a class="github" href="https://github.com/bk7711/runbuddy">Github Repository</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
 
+
+
+              <!-- End of Modals -->
             <div class="portfolio">
                 
                 <div class="sites" id="port-one">
                     <img class="image" src="assets/images/ouid_cavern.png" alt="Card image cap">
                     <button class="btn">
-                            <a href="https://fathomless-peak-27221.herokuapp.com/profile" >View website</a>
+                            <a href="https://fathomless-peak-27221.herokuapp.com/" >View website</a>
                         </button>
                     <div class="card-body">
                         <h3 class="title">Oui'd Cavern</h3>
@@ -297,7 +327,7 @@
             <table class="contact-table">
                 <tr>
                     <td>Email: </td>
-                    <td><a href="mailto:bmathematics@gmail.com">bmathematics@gmail.com</a></td>
+                    <td><a href="mailto:carolynlblackwell@gmail.com">carolynlblackwell@gmail.com</a></td>
                 </tr>
                 <tr>
                     <td>Phone: </td>
@@ -327,7 +357,7 @@
 
 
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
