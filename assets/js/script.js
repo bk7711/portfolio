@@ -95,17 +95,14 @@ let portfolio = [
     github: "https://github.com/bk7711/pizza-hunt",
   },
 ];
-
+// fix
 let getProjects = () => {
-  function filterByCategory() {
-    for (var j = 0; j < portfolio.length; j++) {
-      if (portfolio[i].category == targetCategory) {
-        return true;
-      } else return false;
+  let projects = portfolio.filter(function (project) {
+    if (project.category == targetCategory) {
+      return true;
     }
-    projects = portfolio.filter(filterByCategory());
-    console.log(projects);
-  }
+  });
+  console.log(projects);
 };
 
 let setCategory = () => {
@@ -114,6 +111,7 @@ let setCategory = () => {
       console.log(e.target);
       targetCategory = e.target.textContent;
       console.log(targetCategory);
+      getProjects();
     });
   }
 };
