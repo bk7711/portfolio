@@ -35,7 +35,7 @@
         <div class="intro" >
             <img src="assets/images/headshot.jpg" id="headshot">
             <h1>Carolyn Blackwell</h1>
-            <h2>Professional, Manager, Developer</h2>
+            <h2>Full Stack Developer</h2>
         </div>  
     </header>
     
@@ -45,13 +45,13 @@
     <!-- Main Introduction -->
     <main>
         <section class="left" id="home">
-            <article class="card linksLeft links" href="#experience">
+            <article class="card linksLeft links card-panel hoverable" href="#experience">
                 <a href="#experience"><img class="card-img"  src="assets/images/boardroom.jpg" alt="work on desk"></a>
                 <div class="title">
                     <p>Experience</p>
                 </div>
             </article>
-            <article class="card linksLeft links" href="#education">
+            <article class="card linksLeft links card-panel hoverable" href="#education">
                 <a href="#education"><img class="card-img" src="assets/images/floatingBook.jpg" alt="library with a floating book"></a>
                 <div class="title">
                     <p>Education</p>
@@ -84,13 +84,13 @@
         </section>
 
         <section class="right" id="right">
-            <article class="card linksRight links" href="#portfolio">
+            <article class="card linksRight links card-panel hoverable" href="#portfolio">
                 <a href="#portfolio"><img class="card-img" src="./assets/images/coding.jpg" alt="Sign on chair"></a>
                 <div class="title">
                     <p>Portfolio</p>
                 </div>
             </article>
-            <article class="card linksRight links" href="#contact">
+            <article class="card linksRight links card-panel hoverable" href="#contact">
                 <a href="#contact"><img class="card-img" src="assets/images/wooddesk.jpg" alt="paint set"></a>
                 <div class="title">
                     <p>Contact</p>
@@ -104,7 +104,7 @@
     <section class="components experience" id="experience">
         <h2 id="left-title">Experience
             <br>
-            <button class="btn"><a href="./assets/images/resume.pdf">Resume</a></button>
+            <button class="btn"><a href="./assets/images/resume.pdf" target="_blank">Resume</a></button>
         </h2>
         <div class="career">
             <ul>
@@ -166,32 +166,13 @@
                 <h2>Portfolio</h2>
                 <ul>
                     <li><a class="modal-trigger click" href="#modal1">HTML/CSS/JS</a> </li>
-                    <li><a class="modal-trigger click" href="#modal2">Node.js</a></li>
-                    <li><a class="modal-trigger click" href="#modal3">MySQL</a></li>
-                    <li><a class="modal-trigger click" href="#modal4">MongoDB</a></li>
-                    <li><a class="modal-trigger click" href="#modal5">React/MERN</a></li>
+                    <li><a class="modal-trigger click" href="#modal1">Node.js</a></li>
+                    <li><a class="modal-trigger click" href="#modal1">MySQL</a></li>
+                    <li><a class="modal-trigger click" href="#modal1">MongoDB</a></li>
+                    <li><a class="modal-trigger click" href="#modal1">React/MERN</a></li>
                 </ul>
             </div>
-            <!--Start of Modals-->
-            <div id="modal1" class="modal">
-                <div class="sites" id="port-two">
-                    <button class="btn">
-                            <a href="https://bk7711.github.io/runbuddy/" >View website</a>
-                    </button>
-                    <img class="image" src="assets/images/runbuddy.png" alt="Run Buddy">
-                    <div class="card-body">
-                        <h3 class="title">Run Buddy</h3>
-                        <a class="github" href="https://github.com/bk7711/runbuddy">Github Repository</a>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                </div>
-              </div>
-
-
-
-              <!-- End of Modals -->
+          
             <div class="portfolio">
                 
                 <div class="sites" id="port-one">
@@ -214,6 +195,27 @@
                         <a class="github" href="https://github.com/bk7711/runbuddy">Github Repository</a>
                     </div>
                 </div>
+                  <!--Start of Modals-->
+                  <div id="modal1" class="modal">
+                    <div class="modal-content">
+                      <h4 class = "modal-header"></h4>
+                      
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="modal-close waves-effect waves-green indigo accent-2 btn-flat">Close</a>
+                    </div>
+                  </div>
+
+            <div  class = "modal-fixed-footer">
+                <div class = "modal-content modal" id="modal1"></div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+
+
+
+              <!-- End of Modals -->
                 <!-- <br> -->
                 <div class="sites" id="port-three">
                     <img class="image" src="assets/images/weather.png" alt="Weather app">
@@ -247,7 +249,7 @@
                     </div>
                 </div>
         </div>
-        <div class = "sampleModal"></div>
+        <!-- <div class = "sampleModal"></div> -->
     </section>
     <!-- end of Portfolio section -->
 

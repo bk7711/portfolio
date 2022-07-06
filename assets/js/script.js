@@ -1,5 +1,6 @@
 var modalBoxEl = document.getElementsByClassName("modal-trigger");
-let sampleModalEl = document.querySelector(".sampleModal");
+let sampleModalEl = document.querySelector(".modal-content");
+let modalHeaderEl = document.getElementsByClassName("modal-header");
 let targetCategory = "";
 let projects = [];
 let portfolio = [
@@ -96,7 +97,7 @@ let portfolio = [
     github: "https://github.com/bk7711/pizza-hunt",
   },
 ];
-// fix
+//filter projects for category selected
 const getProjects = () => {
   projects = portfolio.filter(function (project) {
     if (project.category == targetCategory) {
@@ -108,33 +109,48 @@ const getProjects = () => {
 };
 
 const displayProjects = () => {
+  sampleModalEl.innerHTML = "";
   for (let i = 0; i < projects.length; i++) {
     let card = document.createElement("div");
     card.setAttribute("class", "sites");
+
     let cardImage = document.createElement("img");
     cardImage.setAttribute("class", "image");
     cardImage.setAttribute("src", projects[i].image);
     card.appendChild(cardImage);
+
     let viewSite = document.createElement("button");
-    viewSite.setAttribute("class", "btn");
-    viewSite.innerHTML = `<a href="${projects[i].website}">View Website</a>`;
+    viewSite.setAttribute("class", "btn sitebtn");
+    viewSite.innerHTML = `<a href="${projects[i].website}" target="_blank">View Website</a>`;
     card.appendChild(viewSite);
 
     let cardBody = document.createElement("div");
     cardBody.setAttribute("class", "card-body");
+
     let title = document.createElement("h3");
     title.setAttribute("class", "title");
     title.textContent = projects[i].title;
     cardBody.appendChild(title);
+
     let github = document.createElement("a");
     github.setAttribute("href", projects[i].github);
     github.textContent = "Github Repository";
+    github.setAttribute("class", "github");
+
     cardBody.appendChild(github);
     card.appendChild(cardBody);
 
+    modalHeaderEl.innerHTML = targetCategory;
+
     sampleModalEl.appendChild(card);
+
+    var elems = document.querySelectorAll(".modal");
+    var instances = M.Modal.init(elems, "inDuration");
+    // instances.close(hide);
   }
 };
+
+//set click events and store target category
 const setCategory = () => {
   for (var i = 0; i < modalBoxEl.length; i++) {
     modalBoxEl[i].addEventListener("click", function (e) {
