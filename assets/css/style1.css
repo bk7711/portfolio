@@ -345,10 +345,14 @@ main {
   opacity: 1;
 }
 #port-one {
-  flex-basis: 100%;
+  flex-basis: 60%;
   height: 500px;
   margin-left: auto;
   margin-right: auto;
+}
+#port-one img {
+  object-fit: cover;
+  height: 80%;
 }
 .sites:hover img {
   opacity: 0.4;
@@ -394,6 +398,29 @@ main {
 .modal .modal-footer {
   background-color: var(--medium);
   color: var(--blues) !important;
+}
+
+.carousel {
+  margin: 20px auto;
+  position: relative;
+  right: 150px;
+}
+.carousel img {
+  width: 500px !important;
+  height: 400px !important;
+  object-fit: fill;
+}
+.carousel-item btn {
+  position: sticky;
+}
+.cbtn {
+  display: none;
+  position: relative;
+  top: 230px;
+  left: 950px;
+}
+.yescbtn {
+  display: block;
 }
 /* start education section */
 .education h2 {

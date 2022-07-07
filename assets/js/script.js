@@ -1,6 +1,7 @@
 var modalBoxEl = document.getElementsByClassName("modal-trigger");
 let sampleModalEl = document.querySelector(".modal-content");
 let modalHeaderEl = document.getElementsByClassName("modal-header");
+let carouselItemEl = document.getElementsByClassName("carousel-item");
 let targetCategory = "";
 let projects = [];
 let portfolio = [
@@ -140,7 +141,7 @@ const displayProjects = () => {
     cardBody.appendChild(github);
     card.appendChild(cardBody);
 
-    modalHeaderEl.innerHTML = targetCategory;
+    modalHeaderEl.textContent = targetCategory;
 
     sampleModalEl.appendChild(card);
 
@@ -149,6 +150,26 @@ const displayProjects = () => {
     // instances.close(hide);
   }
 };
+
+//load portfolio carousel
+document.addEventListener("DOMContentLoaded", function () {
+  var elems = document.querySelectorAll(".carousel");
+  var instances = M.Carousel.init(elems, {
+    padding: 10,
+    dist: -20,
+  });
+});
+//look for active carousel item
+const cItem = () => {
+  for (var i = 0; i < carouselItemEl.length; i++) {
+    carouselItemEl[i].addEventListener("click", function (e) {
+      if (carouselItemEl.classList.contains("active")) {
+        console.log(carouselItemEl);
+      }
+    });
+  }
+};
+cItem();
 
 //set click events and store target category
 const setCategory = () => {
