@@ -160,16 +160,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 //look for active carousel item
-const cItem = () => {
-  for (var i = 0; i < carouselItemEl.length; i++) {
-    carouselItemEl[i].addEventListener("click", function (e) {
-      if (carouselItemEl.classList.contains("active")) {
-        console.log(carouselItemEl);
-      }
-    });
-  }
-};
-cItem();
+// const cItem = () => {
+//   for (var i = 0; i < carouselItemEl.length; i++) {
+//     carouselItemEl[i].addEventListener("click", function (e) {
+//       if (carouselItemEl.classList.contains("active")) {
+//         console.log(carouselItemEl);
+//       }
+//     });
+//   }
+// };
+// cItem();
 
 //set click events and store target category
 const setCategory = () => {
