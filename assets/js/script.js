@@ -15,7 +15,7 @@ let portfolio = [
   {
     title: "Employee Tracker",
     category: "MySQL",
-    image: "#",
+    image: "assets/images/employeeTracker.png",
     website:
       "https://drive.google.com/file/d/1IvZybPt6YWH8MmX6r6tbWuFUHGRPPXQV/view",
     github: "https://github.com/bk7711/employee_tracker",
@@ -97,6 +97,13 @@ let portfolio = [
     website: "#",
     github: "https://github.com/bk7711/pizza-hunt",
   },
+  {
+    title: "Task Master Pro",
+    category: "HTML/CSS/JS",
+    image: "assets/images/taskmasterPro.png",
+    website: "https://bk7711.github.io/taskmaster-pro/",
+    github: "https://github.com/bk7711/taskmaster-pro",
+  },
 ];
 //filter projects for category selected
 const getProjects = () => {
@@ -160,16 +167,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 //look for active carousel item
-// const cItem = () => {
-//   for (var i = 0; i < carouselItemEl.length; i++) {
-//     carouselItemEl[i].addEventListener("click", function (e) {
-//       if (carouselItemEl.classList.contains("active")) {
-//         console.log(carouselItemEl);
-//       }
-//     });
-//   }
-// };
-// cItem();
+const activeItem = () => {
+  let active = document.getElementsByClassName("active");
+  console.log(active);
+  let chosen = active.filter(carousel - activeItem.active);
+  console.log(chosen);
+};
 
 //set click events and store target category
 const setCategory = () => {
