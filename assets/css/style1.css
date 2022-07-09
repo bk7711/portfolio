@@ -604,6 +604,9 @@ i {
   /* end experience section */
 
   /* start portfolio section */
+  #port-one {
+    width: 100%;
+  }
   #portfolio div {
     display: block;
   }
@@ -723,7 +726,6 @@ i {
   }
   .carousel {
     display: none !important;
-    margin: auto;
   }
   .carousel-btn {
     display: none !important;
