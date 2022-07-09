@@ -59,13 +59,19 @@ header div h2 {
   margin: 5px 0px;
   font-size: 20px;
 }
+h1 {
+  font-size: 4rem !important;
+}
 .intro {
   align-self: center;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #headshot {
-  width: 34%;
-  height: 35%;
+  width: 34% !important;
+  height: 32% !important;
   margin: 30px 0 15px 0;
 }
 .gradient {
@@ -95,7 +101,7 @@ main {
 }
 .left,
 .right {
-  flex: 1 1 350px;
+  flex: 1 5 300px;
   min-width: 200px;
 }
 .card {
@@ -430,10 +436,7 @@ main {
   object-fit: fill;
 }
 .carousel-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 70px 0px 0px 300px;
+  margin: 10px auto;
 }
 .cbtn {
   display: none;
@@ -537,6 +540,13 @@ i {
     list-style-type: none;
     padding: 7px 10px;
     font-size: 15px;
+  }
+  h1 {
+    font-size: 2.5rem !important;
+    margin: 15px !important;
+  }
+  .intro img {
+    height: 90px !important;
   }
   main {
     width: 100%;
@@ -657,6 +667,12 @@ i {
   }
 }
 @media screen and (max-width: 768px) {
+  .intro {
+    font-size: 1.5rem !important;
+  }
+  h1 {
+    margin: 5px !important;
+  }
   main {
     flex-direction: column;
     width: 100%;
@@ -665,8 +681,10 @@ i {
   li {
     text-overflow: wrap;
   }
+
   .card {
     margin: 0 20px;
+    padding: 10px !important;
   }
   .card:hover {
     border: 3px solid var(--blues);
@@ -690,12 +708,25 @@ i {
     text-align: center;
     text-decoration: underline;
   }
+  .categories ul {
+    margin: 15px;
+  }
+  #port-one {
+    width: 100%;
+  }
   #portfolio {
     padding: 0;
     width: 100%;
   }
   #portfolio h2 {
     text-align: center;
+  }
+  .carousel {
+    display: none !important;
+    margin: auto;
+  }
+  .carousel-btn {
+    display: none !important;
   }
   .alledu div {
     width: 100%;
@@ -735,6 +766,21 @@ i {
   }
   .middle article {
     display: none;
+  }
+  .btn {
+    width: 150px !important;
+  }
+  .categories ul {
+    margin: 15px;
+  }
+  #port-one {
+    width: 100%;
+  }
+  .carousel {
+    display: none !important;
+  }
+  .carousel-btn {
+    display: none !important;
   }
   .experience {
     flex-basis: 100vw;

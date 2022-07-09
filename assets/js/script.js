@@ -2,6 +2,7 @@ var modalBoxEl = document.getElementsByClassName("modal-trigger");
 let sampleModalEl = document.querySelector(".modal-content");
 let modalHeaderEl = document.getElementsByClassName("modal-header");
 let carouselItemEl = document.getElementsByClassName("carousel-item");
+let carouselBtnEl = document.querySelector(".carousel-btn");
 let targetCategory = "";
 let projects = [];
 let portfolio = [
@@ -164,15 +165,17 @@ document.addEventListener("DOMContentLoaded", function () {
   var instances = M.Carousel.init(elems, {
     padding: 10,
     dist: -20,
+    onCycleTo: function (data) {
+      let active = data.text;
+      for (let i = 0; i < portfolio.length; i++) {
+        if (active === portfolio[i].title) {
+          carouselBtnEl.setAttribute("href", portfolio[i].website);
+          carouselBtnEl.style.color = "var(--blues)";
+        }
+      }
+    },
   });
 });
-//look for active carousel item
-const activeItem = () => {
-  let active = document.getElementsByClassName("active");
-  console.log(active);
-  let chosen = active.filter(carousel - activeItem.active);
-  console.log(chosen);
-};
 
 //set click events and store target category
 const setCategory = () => {
