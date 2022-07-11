@@ -101,7 +101,7 @@ main {
 }
 .left,
 .right {
-  flex: 1 5 200px;
+  flex: 1 5 350px;
   min-width: 200px;
 }
 .card {
@@ -711,6 +711,10 @@ i {
   }
   li {
     text-overflow: wrap;
+  }
+  .left,
+  .right {
+    flex-basis: 200px;
   }
   .card {
     margin: 5px 20px;
